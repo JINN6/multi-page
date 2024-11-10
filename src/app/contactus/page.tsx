@@ -2,8 +2,16 @@
 import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 
+
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
 const ContactUs = () => {
-  const [formData, setFormData] = useState({
+
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     message: ''
@@ -29,7 +37,7 @@ const ContactUs = () => {
       <div className="bg-gray-900 py-8 sm:py-12 md:py-16 min-h-screen flex flex-col justify-center px-4 sm:px-8">
         <div className="text-center mb-8 sm:mb-12">
           <h1 className="text-3xl sm:text-4xl font-extrabold text-red-500">Contact Us</h1>
-          <p className="text-gray-300 text-base sm:text-lg">We'd love to hear from you! Fill out the form below to get in touch.</p>
+          <p className="text-gray-300 text-base sm:text-lg">We&apos;d love to hear from you! Fill out the form below to get in touch.</p>
         </div>
 
         <div className="max-w-screen-sm sm:max-w-screen-md mx-auto bg-gray-800 p-6 sm:p-8 rounded-lg shadow-lg w-full">
